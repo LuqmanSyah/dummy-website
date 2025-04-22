@@ -104,13 +104,13 @@
       </div>
     </div>
 
-    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+    <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
-      <div class="carousel-item active" style="background-image: url(assets_edit/IMG_0333.JPG)">
+      <div class="carousel-item active" style="background-image: url(assets_edit/IMG_0333.JPG); background-color: #0b212d;">
       </div>
-      <div class="carousel-item" style="background-image: url(assets_edit/IMG_0352.JPG)"></div>
-      <div class="carousel-item" style="background-image: url(assets_edit/IMG_0385.JPG)"></div>
-      <div class="carousel-item" style="background-image: url(assets_edit/IMG_0502.JPG)"></div>
+      <div class="carousel-item" style="background-image: url(assets_edit/IMG_0352.JPG); background-color: #0b212d;"></div>
+      <div class="carousel-item" style="background-image: url(assets_edit/IMG_0385.JPG); background-color: #0b212d;"></div>
+      <div class="carousel-item" style="background-image: url(assets_edit/IMG_0502.JPG); background-color: #0b212d;"></div>
 
       <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
@@ -499,6 +499,24 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+  <!-- Image Preloader -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const imageUrls = [
+        'assets_edit/IMG_0333.JPG',
+        'assets_edit/IMG_0352.JPG',
+        'assets_edit/IMG_0385.JPG',
+        'assets_edit/IMG_0502.JPG'
+      ];
+      
+      // Preload all carousel images
+      imageUrls.forEach(url => {
+        const img = new Image();
+        img.src = url;
+      });
+    });
+  </script>
 
 </body>
 
